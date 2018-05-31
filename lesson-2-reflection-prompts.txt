@@ -1,0 +1,36 @@
+1.What happens when you initialize a repository? Why do you need to do it?
+
+  "初始化空的 Git 仓库于 /home/asd/.git/".创建此文件后，你可能还要运行 git status。此时，你应看到这两个文件均列出为未被跟踪的文件。
+  I need to create a new git repository use command "git init".
+
+2.How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+
+It is an area where just store files for a momment and it doesn't save any files.
+It allows many files commit for one time not every times. It save our life.
+
+3.How can you use the staging area to make sure you have one commit per logical
+change?
+
+Using command "git add xxx"to add a file you want to commit into staging area.And then use command "git commit xxx" to commit files in staging area.If you want to check what have changed between your working directory and stage ,you can use command "git diff" instantly.Furthermore,you can use "git diff --staged" to check what have changed between staging area and the newest commit in repository.
+
+4.What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+I can check its label to find what I want by using command "git branch".And I when I want to turn to another branch ,use command "git branch xxx". 
+
+5.How do the diagrams help you visualize the branch structure?
+
+Use command "git log --graph --online branch1 branch2".It will give you a structrue of branches you want to see.
+
+6.What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+Use command "git merge branch1 branch2" to combine branch1 and branch2 into a new one,those branches called parents.There is a loop on branch. 
+
+7.What are the pros and cons of Git's automatic merging vs. always doing merges
+manually?
+
+             |pros                             	|cons                                   	  |
+auto    |save our life                	|can't resolve conflicts   |
+manu  |can resolve conflicts |cost your time                   |
